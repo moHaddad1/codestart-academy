@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how to build accessible HTML forms using text inputs, labels, radio buttons, checkboxes, submit buttons, and the name attribute.">
+  <meta name="author" content="Mohamed Alhaddad">
+  <title>CodeStart Academy — HTML Forms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="index.html" class="site-brand">
+        <span class="site-logo-box">
+          <img src="assets/images/logo.png" alt="CodeStart Academy Logo" width="42" height="42">
+        </span>
+        <span class="site-brand-text">
+          <span class="site-title">CodeStart Academy</span>
+          <span class="site-subtitle">Coding for Beginners</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html-intro.html" class="active">HTML</a></li>
+          <li><a href="css-intro.html">CSS</a></li>
+          <li><a href="exercises.html">Practice</a></li>
+          <li><a href="cheatsheets.html">Sheets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="lesson-layout">
+
+      <aside class="lesson-sidebar" aria-label="HTML lessons">
+        <h2 class="sidebar-title">HTML Lessons</h2>
+        <ul class="sidebar-links">
+          <li><a href="html-intro.html">Introduction</a></li>
+          <li><a href="html-elements.html">Elements</a></li>
+          <li><a href="html-tables.html">Tables</a></li>
+          <li><a href="html-layout.html">Layout</a></li>
+          <li><a href="html-forms.html" class="active">Forms</a></li>
+        </ul>
+        <div class="sidebar-divider"></div>
+        <a href="exercises.html" class="sidebar-secondary-link">Practice Quiz &rarr;</a>
+        <a href="cheatsheets.html" class="sidebar-secondary-link">HTML Cheatsheet &rarr;</a>
+      </aside>
+
+      <div class="lesson-content">
+
+        <header class="lesson-header">
+          <div class="lesson-header-meta">
+            <span class="badge badge-html">HTML Track</span>
+            <span class="lesson-step-label">Lesson 5 of 5</span>
+          </div>
+          <h1 class="lesson-page-title">HTML Forms</h1>
+          <p class="lesson-page-lead">An HTML form is used to collect user input. The user input is most often sent to a server for processing.</p>
+        </header>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Interactive Form Example</h2>
+
+          <div class="example-box">
+            <div class="example-box-header">
+              <span class="example-label">Example</span>
+            </div>
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;form&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"fname"</span><span class="tok-tag">&gt;</span>First name:<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"text"</span> <span class="tok-attr">id</span>=<span class="tok-str">"fname"</span> <span class="tok-attr">name</span>=<span class="tok-str">"fname"</span><span class="tok-tag">&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"lname"</span><span class="tok-tag">&gt;</span>Last name:<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"text"</span> <span class="tok-attr">id</span>=<span class="tok-str">"lname"</span> <span class="tok-attr">name</span>=<span class="tok-str">"lname"</span><span class="tok-tag">&gt;</span>
+<span class="tok-tag">&lt;/form&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Live Interactive Preview</div>
+              <div class="preview-card-body">
+                <form class="form-preview-fields" data-demo-form>
+                  <div class="form-preview-group">
+                    <label for="preview-fname">First name:</label>
+                    <input type="text" id="preview-fname" name="fname" placeholder="Enter first name">
+                  </div>
+                  <div class="form-preview-group">
+                    <label for="preview-lname">Last name:</label>
+                    <input type="text" id="preview-lname" name="lname" placeholder="Enter last name">
+                  </div>
+                  <div class="form-preview-actions">
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                    <button type="reset" class="btn btn-secondary btn-sm">Reset</button>
+                  </div>
+                  <div class="form-feedback" role="status" aria-live="polite"></div>
+                </form>
+              </div>
+            </div>
+
+            <div class="example-actions">
+              <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Try it Yourself &raquo;</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">The <code>&lt;form&gt;</code> Element</h2>
+          <p class="lesson-text">The HTML <code>&lt;form&gt;</code> element is used to create an HTML form for user input:</p>
+
+          <div class="syntax-strip">
+            <div class="code-card" data-lang="HTML Syntax">
+              <pre><code><span class="tok-tag">&lt;form&gt;</span>
+  <span class="tok-comment">&lt;!-- form elements go here --&gt;</span>
+<span class="tok-tag">&lt;/form&gt;</span></code></pre>
+            </div>
+          </div>
+
+          <p class="lesson-text">The <code>&lt;form&gt;</code> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">The <code>&lt;input&gt;</code> Element</h2>
+          <p class="lesson-text">The HTML <code>&lt;input&gt;</code> element is the most used form element. An <code>&lt;input&gt;</code> element can be displayed in many ways, depending on the <code>type</code> attribute.</p>
+          <p class="lesson-text">Here are some examples:</p>
+
+          <div class="table-scroll">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;input type="text"&gt;</code></td>
+                  <td>Displays a single-line text input field</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;input type="radio"&gt;</code></td>
+                  <td>Displays a radio button (for selecting one of many choices)</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;input type="checkbox"&gt;</code></td>
+                  <td>Displays a checkbox (for selecting zero or more of many choices)</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;input type="submit"&gt;</code></td>
+                  <td>Displays a submit button (for submitting the form)</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;input type="button"&gt;</code></td>
+                  <td>Displays a clickable button</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Text Fields</h2>
+          <p class="lesson-text">The <code>&lt;input type="text"&gt;</code> defines a single-line input field for text input.</p>
+
+          <div class="example-box">
+            <div class="example-box-header">
+              <span class="example-label">Example</span>
+            </div>
+            <p class="example-caption">A form with input fields for text:</p>
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;form&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"fname"</span><span class="tok-tag">&gt;</span>First name:<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"text"</span> <span class="tok-attr">id</span>=<span class="tok-str">"fname"</span> <span class="tok-attr">name</span>=<span class="tok-str">"fname"</span><span class="tok-tag">&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"lname"</span><span class="tok-tag">&gt;</span>Last name:<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"text"</span> <span class="tok-attr">id</span>=<span class="tok-str">"lname"</span> <span class="tok-attr">name</span>=<span class="tok-str">"lname"</span><span class="tok-tag">&gt;</span>
+<span class="tok-tag">&lt;/form&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Browser Preview</div>
+              <div class="preview-card-body">
+                <div class="form-preview-fields">
+                  <div class="form-preview-group">
+                    <label for="text-fname">First name:</label>
+                    <input type="text" id="text-fname" name="fname">
+                  </div>
+                  <div class="form-preview-group">
+                    <label for="text-lname">Last name:</label>
+                    <input type="text" id="text-lname" name="lname">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-actions">
+              <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_text" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Try it Yourself &raquo;</a>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p><strong>Note:</strong> The form itself is not visible. Also note that the default width of an input field is 20 characters.</p>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">The <code>&lt;label&gt;</code> Element</h2>
+          <p class="lesson-text">Notice the use of the <code>&lt;label&gt;</code> element in the example above.</p>
+
+          <ul class="lesson-list">
+            <li>The <code>&lt;label&gt;</code> tag defines a label for many form elements.</li>
+            <li>The <code>&lt;label&gt;</code> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focuses on the input element.</li>
+            <li>The <code>&lt;label&gt;</code> element also helps users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) — because when the user clicks the text within the <code>&lt;label&gt;</code> element, it toggles the radio button/checkbox.</li>
+            <li>The <code>for</code> attribute of the <code>&lt;label&gt;</code> tag should be equal to the <code>id</code> attribute of the <code>&lt;input&gt;</code> element to bind them together.</li>
+          </ul>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Radio Buttons</h2>
+          <p class="lesson-text">The <code>&lt;input type="radio"&gt;</code> defines a radio button. Radio buttons let a user select <strong>ONE</strong> of a limited number of choices.</p>
+
+          <div class="example-box">
+            <div class="example-box-header">
+              <span class="example-label">Example</span>
+            </div>
+            <p class="example-caption">A form with radio buttons:</p>
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;p&gt;</span>Choose your favorite Web language:<span class="tok-tag">&lt;/p&gt;</span>
+
+<span class="tok-tag">&lt;form&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"radio"</span> <span class="tok-attr">id</span>=<span class="tok-str">"html"</span> <span class="tok-attr">name</span>=<span class="tok-str">"fav_language"</span> <span class="tok-attr">value</span>=<span class="tok-str">"HTML"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"html"</span><span class="tok-tag">&gt;</span>HTML<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"radio"</span> <span class="tok-attr">id</span>=<span class="tok-str">"css"</span> <span class="tok-attr">name</span>=<span class="tok-str">"fav_language"</span> <span class="tok-attr">value</span>=<span class="tok-str">"CSS"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"css"</span><span class="tok-tag">&gt;</span>CSS<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"radio"</span> <span class="tok-attr">id</span>=<span class="tok-str">"javascript"</span> <span class="tok-attr">name</span>=<span class="tok-str">"fav_language"</span> <span class="tok-attr">value</span>=<span class="tok-str">"JavaScript"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"javascript"</span><span class="tok-tag">&gt;</span>JavaScript<span class="tok-tag">&lt;/label&gt;</span>
+<span class="tok-tag">&lt;/form&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Browser Preview</div>
+              <div class="preview-card-body">
+                <p class="lesson-text">Choose your favorite Web language:</p>
+                <div class="form-choice-list">
+                  <label class="form-choice-item" for="radio-html">
+                    <input type="radio" id="radio-html" name="fav_language" value="HTML">
+                    <span>HTML</span>
+                  </label>
+                  <label class="form-choice-item" for="radio-css">
+                    <input type="radio" id="radio-css" name="fav_language" value="CSS">
+                    <span>CSS</span>
+                  </label>
+                  <label class="form-choice-item" for="radio-js">
+                    <input type="radio" id="radio-js" name="fav_language" value="JavaScript">
+                    <span>JavaScript</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-actions">
+              <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_radio" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Try it Yourself &raquo;</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Checkboxes</h2>
+          <p class="lesson-text">The <code>&lt;input type="checkbox"&gt;</code> defines a <strong>checkbox</strong>. Checkboxes let a user select <strong>ZERO or MORE</strong> options of a limited number of choices.</p>
+
+          <div class="example-box">
+            <div class="example-box-header">
+              <span class="example-label">Example</span>
+            </div>
+            <p class="example-caption">A form with checkboxes:</p>
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;form&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"checkbox"</span> <span class="tok-attr">id</span>=<span class="tok-str">"vehicle1"</span> <span class="tok-attr">name</span>=<span class="tok-str">"vehicle1"</span> <span class="tok-attr">value</span>=<span class="tok-str">"Bike"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"vehicle1"</span><span class="tok-tag">&gt;</span>I have a bike<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"checkbox"</span> <span class="tok-attr">id</span>=<span class="tok-str">"vehicle2"</span> <span class="tok-attr">name</span>=<span class="tok-str">"vehicle2"</span> <span class="tok-attr">value</span>=<span class="tok-str">"Car"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"vehicle2"</span><span class="tok-tag">&gt;</span>I have a car<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"checkbox"</span> <span class="tok-attr">id</span>=<span class="tok-str">"vehicle3"</span> <span class="tok-attr">name</span>=<span class="tok-str">"vehicle3"</span> <span class="tok-attr">value</span>=<span class="tok-str">"Boat"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"vehicle3"</span><span class="tok-tag">&gt;</span>I have a boat<span class="tok-tag">&lt;/label&gt;</span>
+<span class="tok-tag">&lt;/form&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Browser Preview</div>
+              <div class="preview-card-body">
+                <div class="form-choice-list">
+                  <label class="form-choice-item" for="chk-vehicle1">
+                    <input type="checkbox" id="chk-vehicle1" name="vehicle1" value="Bike">
+                    <span>I have a bike</span>
+                  </label>
+                  <label class="form-choice-item" for="chk-vehicle2">
+                    <input type="checkbox" id="chk-vehicle2" name="vehicle2" value="Car">
+                    <span>I have a car</span>
+                  </label>
+                  <label class="form-choice-item" for="chk-vehicle3">
+                    <input type="checkbox" id="chk-vehicle3" name="vehicle3" value="Boat">
+                    <span>I have a boat</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-actions">
+              <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_input_checkbox" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Try it Yourself &raquo;</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">The Submit Button</h2>
+          <p class="lesson-text">The <code>&lt;input type="submit"&gt;</code> defines a button for submitting the form data to a form-handler.</p>
+          <p class="lesson-text">The form-handler is typically a file on the server with a script for processing input data. The form-handler is specified in the form's <code>action</code> attribute.</p>
+
+          <div class="example-box">
+            <div class="example-box-header">
+              <span class="example-label">Example</span>
+            </div>
+            <p class="example-caption">A form with a submit button:</p>
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;form</span> <span class="tok-attr">action</span>=<span class="tok-str">"/action_page.php"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"fname"</span><span class="tok-tag">&gt;</span>First name:<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"text"</span> <span class="tok-attr">id</span>=<span class="tok-str">"fname"</span> <span class="tok-attr">name</span>=<span class="tok-str">"fname"</span> <span class="tok-attr">value</span>=<span class="tok-str">"John"</span><span class="tok-tag">&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"lname"</span><span class="tok-tag">&gt;</span>Last name:<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"text"</span> <span class="tok-attr">id</span>=<span class="tok-str">"lname"</span> <span class="tok-attr">name</span>=<span class="tok-str">"lname"</span> <span class="tok-attr">value</span>=<span class="tok-str">"Doe"</span><span class="tok-tag">&gt;&lt;br&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"submit"</span> <span class="tok-attr">value</span>=<span class="tok-str">"Submit"</span><span class="tok-tag">&gt;</span>
+<span class="tok-tag">&lt;/form&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Live Interactive Preview</div>
+              <div class="preview-card-body">
+                <form class="form-preview-fields" data-demo-form>
+                  <div class="form-preview-group">
+                    <label for="submit-fname">First name:</label>
+                    <input type="text" id="submit-fname" name="fname" value="John">
+                  </div>
+                  <div class="form-preview-group">
+                    <label for="submit-lname">Last name:</label>
+                    <input type="text" id="submit-lname" name="lname" value="Doe">
+                  </div>
+                  <div class="form-preview-actions">
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                    <button type="reset" class="btn btn-secondary btn-sm">Reset</button>
+                  </div>
+                  <div class="form-feedback" role="status" aria-live="polite"></div>
+                </form>
+              </div>
+            </div>
+
+            <div class="example-actions">
+              <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Try it Yourself &raquo;</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">The Name Attribute for <code>&lt;input&gt;</code></h2>
+          <p class="lesson-text">Notice that each input field must have a <code>name</code> attribute to be submitted.</p>
+          <p class="lesson-text">If the <code>name</code> attribute is omitted, the value of the input field will not be sent at all.</p>
+
+          <div class="example-box">
+            <div class="example-box-header">
+              <span class="example-label">Example</span>
+            </div>
+            <p class="example-caption">This example will <strong>not</strong> submit the value of the "First name" input field because it is missing the <code>name</code> attribute:</p>
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;form</span> <span class="tok-attr">action</span>=<span class="tok-str">"/action_page.php"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;label</span> <span class="tok-attr">for</span>=<span class="tok-str">"fname"</span><span class="tok-tag">&gt;</span>First name:<span class="tok-tag">&lt;/label&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"text"</span> <span class="tok-attr">id</span>=<span class="tok-str">"fname"</span> <span class="tok-attr">value</span>=<span class="tok-str">"John"</span><span class="tok-tag">&gt;&lt;br&gt;&lt;br&gt;</span>
+  <span class="tok-tag">&lt;input</span> <span class="tok-attr">type</span>=<span class="tok-str">"submit"</span> <span class="tok-attr">value</span>=<span class="tok-str">"Submit"</span><span class="tok-tag">&gt;</span>
+<span class="tok-tag">&lt;/form&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Try Submitting Without a Name Attribute</div>
+              <div class="preview-card-body">
+                <form class="form-preview-fields" data-demo-form>
+                  <div class="form-preview-group">
+                    <label for="noname-fname">First name (missing <code>name</code>):</label>
+                    <input type="text" id="noname-fname" value="John">
+                  </div>
+                  <div class="form-preview-actions">
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                  </div>
+                  <div class="form-feedback" role="status" aria-live="polite"></div>
+                </form>
+              </div>
+            </div>
+
+            <div class="example-actions">
+              <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit_id" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Try it Yourself &raquo;</a>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p><strong>Note:</strong> Always add a <code>name</code> attribute to your input fields. Without it, the data will not be included when the form is submitted.</p>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Video Lesson</h2>
+          <div class="lesson-video-wrapper">
+            <iframe src="https://www.youtube.com/embed/VLeERv_dR6Q?si=tSTld-bpYH6vYlra" title="HTML Forms Video Lesson" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <nav class="lesson-nav-btns" aria-label="Lesson navigation">
+          <a href="html-layout.html" class="btn btn-secondary">&larr; Previous: HTML Layout</a>
+          <a href="css-intro.html" class="btn btn-dark">Next: CSS Introduction &rarr;</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <img src="assets/images/logo.png" alt="CodeStart Academy" width="34" height="34">
+            <span>CodeStart Academy</span>
+          </div>
+          <p class="footer-description">An interactive, beginner-friendly HTML &amp; CSS learning platform built with semantic markup, modern CSS architecture, and vanilla JavaScript.</p>
+        </div>
+
+        <div>
+          <h3>Curriculum</h3>
+          <ul class="footer-links">
+            <li><a href="html-intro.html">HTML Fundamentals</a></li>
+            <li><a href="css-intro.html">CSS Styling &amp; Layout</a></li>
+            <li><a href="css-boxmodel.html">Box Model Visualizer</a></li>
+            <li><a href="exercises.html">Interactive Practice</a></li>
+            <li><a href="cheatsheets.html">Quick Reference Sheets</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Creator</h3>
+          <ul class="footer-links">
+            <li><a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a></li>
+            <li><a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub (@moHaddad1)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeStart Academy. Built by <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a>.</p>
+        <div class="footer-credit-links">
+          <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          <a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

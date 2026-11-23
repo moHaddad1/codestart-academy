@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CodeStart Academy — Learn HTML and CSS step by step with structured lessons, interactive labs, quizzes, and searchable quick-reference cheatsheets.">
+  <meta name="author" content="Mohamed Alhaddad">
+  <title>CodeStart Academy — Learn HTML &amp; CSS Step by Step</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="index.html" class="site-brand">
+        <span class="site-logo-box">
+          <img src="assets/images/logo.png" alt="CodeStart Academy Logo" width="42" height="42">
+        </span>
+        <span class="site-brand-text">
+          <span class="site-title">CodeStart Academy</span>
+          <span class="site-subtitle">Coding for Beginners</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="html-intro.html">HTML</a></li>
+          <li><a href="css-intro.html">CSS</a></li>
+          <li><a href="exercises.html">Practice</a></li>
+          <li><a href="cheatsheets.html">Sheets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-eyebrow">
+            <span class="badge badge-accent">Interactive Web Fundamentals</span>
+          </div>
+          <h1 class="hero-title">Welcome to <span>CodeStart Academy</span></h1>
+          <p class="hero-lead">Your way to learn HTML and CSS step by step — from your very first tag to responsive Flexbox layouts, interactive visualizers, and hands-on practice.</p>
+
+          <div class="hero-actions">
+            <a href="html-intro.html" class="btn btn-primary">Start HTML Track &rarr;</a>
+            <a href="css-intro.html" class="btn btn-secondary">Explore CSS Track</a>
+            <a href="exercises.html" class="btn btn-secondary">Take Practice Quiz</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>9 Lessons</strong>
+              <span>HTML5 &amp; Modern CSS</span>
+            </div>
+            <div class="hero-stat">
+              <strong>6 Videos</strong>
+              <span>Curated Walkthroughs</span>
+            </div>
+            <div class="hero-stat">
+              <strong>Interactive Labs</strong>
+              <span>Quizzes, Search &amp; Box Model</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-preview-pill">
+            <span class="hero-preview-dot" aria-hidden="true"></span>
+            Clean, Copy-Ready Starter Code
+          </div>
+          <div class="code-card" data-lang="HTML">
+            <pre><code><span class="tok-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tok-tag">&lt;html</span> <span class="tok-attr">lang</span>=<span class="tok-str">"en"</span><span class="tok-tag">&gt;</span>
+<span class="tok-tag">&lt;head&gt;</span>
+  <span class="tok-tag">&lt;title&gt;</span>My First Webpage<span class="tok-tag">&lt;/title&gt;</span>
+<span class="tok-tag">&lt;/head&gt;</span>
+<span class="tok-tag">&lt;body&gt;</span>
+  <span class="tok-tag">&lt;h1&gt;</span>Hello, Web!<span class="tok-tag">&lt;/h1&gt;</span>
+  <span class="tok-tag">&lt;p&gt;</span>Built step by step at CodeStart.<span class="tok-tag">&lt;/p&gt;</span>
+<span class="tok-tag">&lt;/body&gt;</span>
+<span class="tok-tag">&lt;/html&gt;</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Start Learning</h2>
+          <p>Follow structured, bite-sized tutorials designed to take you from absolute beginner to building clean, well-structured websites.</p>
+        </div>
+
+        <div class="course-cards-grid">
+          <article class="course-card">
+            <div class="course-card-top">
+              <div class="course-card-icon is-html">
+                <img src="assets/images/html-logo.png" alt="HTML5 Logo" width="56" height="56">
+              </div>
+              <div>
+                <span class="badge badge-html">5 Lessons</span>
+                <h3>HTML</h3>
+                <p class="course-card-subtitle">Structure &amp; Semantics</p>
+              </div>
+            </div>
+            <p class="course-card-desc">Learn how to build the structure of web pages using headings, links, data tables, semantic HTML5 layouts, and accessible forms.</p>
+            <div class="course-topic-pills">
+              <span>Introduction</span>
+              <span>Elements</span>
+              <span>Tables</span>
+              <span>Layout</span>
+              <span>Forms</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="html-intro.html" class="btn btn-primary">Start HTML Track &rarr;</a>
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div class="course-card-top">
+              <div class="course-card-icon is-css">
+                <img src="assets/images/css-logo.png" alt="CSS3 Logo" width="56" height="56">
+              </div>
+              <div>
+                <span class="badge badge-css">4 Lessons</span>
+                <h3>CSS</h3>
+                <p class="course-card-subtitle">Design &amp; Layout</p>
+              </div>
+            </div>
+            <p class="course-card-desc">Style your website and make it look beautiful by mastering selectors, the CSS box model, spacing, and modern Flexbox layouts.</p>
+            <div class="course-topic-pills">
+              <span>Introduction</span>
+              <span>Box Model Lab</span>
+              <span>Flexbox Layout</span>
+              <span>Selectors</span>
+            </div>
+            <div class="course-card-footer">
+              <a href="css-intro.html" class="btn btn-primary">Start CSS Track &rarr;</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="quick-tools-grid">
+          <a href="css-boxmodel.html" class="quick-tool-card">
+            <span class="badge badge-css">Interactive Lab</span>
+            <h3>CSS Box Model Visualizer</h3>
+            <p>Adjust width, padding, border, and margin sliders in real time to see live layout dimensions and generated CSS.</p>
+            <span class="quick-tool-cta">Launch Visualizer &rarr;</span>
+          </a>
+
+          <a href="exercises.html" class="quick-tool-card">
+            <span class="badge badge-success">Hands-On Practice</span>
+            <h3>Interactive Quizzes</h3>
+            <p>Test your knowledge with instant validation, built-in hints, explanations, and a live score tracker.</p>
+            <span class="quick-tool-cta">Start Practicing &rarr;</span>
+          </a>
+
+          <a href="cheatsheets.html" class="quick-tool-card">
+            <span class="badge badge-js">Quick Reference</span>
+            <h3>Searchable Cheatsheets</h3>
+            <p>Instantly search and filter HTML tags, CSS properties, and JavaScript operators while you code.</p>
+            <span class="quick-tool-cta">Browse Cheatsheets &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section home-section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Video Lessons</h2>
+          <p>Reinforce every core concept with curated video walkthroughs covering HTML, CSS, frontend roadmaps, and portfolio building.</p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/HD13eq_Pmp8?si=lAJnQm1dvPcUPhL5" title="Learn HTML in 1 hour" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-details">
+              <h3>Learn HTML in 1 hour</h3>
+              <p>Learn HTML for beginners.</p>
+              <div class="video-meta">
+                <span>60 min</span>
+                <span class="level-pill">Beginner</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU?si=DffZNlHeiVyJZXyz" title="HTML Tutorial for Beginners: HTML Crash Course" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-details">
+              <h3>HTML Tutorial for Beginners: HTML Crash Course</h3>
+              <p>Learn HTML for beginners.</p>
+              <div class="video-meta">
+                <span>69 min</span>
+                <span class="level-pill">Intermediate</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/1PnVor36_40?si=GQXmKsVrVGN1P1hh" title="Learn CSS in 20 Minutes" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-details">
+              <h3>Learn CSS in 20 Minutes</h3>
+              <p>Short CSS Introduction.</p>
+              <div class="video-meta">
+                <span>24 min</span>
+                <span class="level-pill">Beginner</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/wRNinF7YQqQ?si=BdQgJ1-TwgeV7Cv5" title="Learn CSS in 1 hour" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-details">
+              <h3>Learn CSS in 1 hour</h3>
+              <p>Learn CSS for beginners.</p>
+              <div class="video-meta">
+                <span>60 min</span>
+                <span class="level-pill">Intermediate</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/Tef1e9FiSR0?si=lFopAVijfDsfkyl3" title="The Complete Frontend Developer Roadmap" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-details">
+              <h3>The Complete Frontend Developer Roadmap</h3>
+              <p>Your way to become a Front-end Dev.</p>
+              <div class="video-meta">
+                <span>9 min</span>
+                <span class="level-pill">Beginner</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-thumbnail">
+              <iframe src="https://www.youtube.com/embed/-u3vE84Wo_U?si=rHq2PiLGIrBMpJVK" title="Create A Portfolio Website Using HTML and CSS Only" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-details">
+              <h3>Create A Portfolio Website Using HTML and CSS Only</h3>
+              <p>Create your first portfolio.</p>
+              <div class="video-meta">
+                <span>40 min</span>
+                <span class="level-pill">Advanced</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <img src="assets/images/logo.png" alt="CodeStart Academy" width="34" height="34">
+            <span>CodeStart Academy</span>
+          </div>
+          <p class="footer-description">An interactive, beginner-friendly HTML &amp; CSS learning platform built with semantic markup, modern CSS architecture, and vanilla JavaScript.</p>
+        </div>
+
+        <div>
+          <h3>Curriculum</h3>
+          <ul class="footer-links">
+            <li><a href="html-intro.html">HTML Fundamentals</a></li>
+            <li><a href="css-intro.html">CSS Styling &amp; Layout</a></li>
+            <li><a href="css-boxmodel.html">Box Model Visualizer</a></li>
+            <li><a href="exercises.html">Interactive Practice</a></li>
+            <li><a href="cheatsheets.html">Quick Reference Sheets</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Creator</h3>
+          <ul class="footer-links">
+            <li><a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a></li>
+            <li><a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub (@moHaddad1)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeStart Academy. Built by <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a>.</p>
+        <div class="footer-credit-links">
+          <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          <a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

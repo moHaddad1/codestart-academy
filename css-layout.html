@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn CSS layout fundamentals including the display property, positioning, and an interactive Flexbox alignment demo.">
+  <meta name="author" content="Mohamed Alhaddad">
+  <title>CodeStart Academy — CSS Layout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="index.html" class="site-brand">
+        <span class="site-logo-box">
+          <img src="assets/images/logo.png" alt="CodeStart Academy Logo" width="42" height="42">
+        </span>
+        <span class="site-brand-text">
+          <span class="site-title">CodeStart Academy</span>
+          <span class="site-subtitle">Coding for Beginners</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html-intro.html">HTML</a></li>
+          <li><a href="css-intro.html" class="active">CSS</a></li>
+          <li><a href="exercises.html">Practice</a></li>
+          <li><a href="cheatsheets.html">Sheets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="lesson-layout">
+
+      <aside class="lesson-sidebar" aria-label="CSS lessons">
+        <h2 class="sidebar-title">CSS Lessons</h2>
+        <ul class="sidebar-links">
+          <li><a href="css-intro.html">Introduction</a></li>
+          <li><a href="css-boxmodel.html">Box Model</a></li>
+          <li><a href="css-layout.html" class="active">Layout</a></li>
+          <li><a href="css-selectors.html">Selectors</a></li>
+        </ul>
+        <div class="sidebar-divider"></div>
+        <a href="exercises.html" class="sidebar-secondary-link">Practice Quiz &rarr;</a>
+        <a href="cheatsheets.html" class="sidebar-secondary-link">CSS Cheatsheet &rarr;</a>
+      </aside>
+
+      <div class="lesson-content">
+
+        <header class="lesson-header">
+          <div class="lesson-header-meta">
+            <span class="badge badge-css">CSS Track</span>
+            <span class="lesson-step-label">Lesson 3 of 4</span>
+          </div>
+          <h1 class="lesson-page-title">CSS Layout</h1>
+          <p class="lesson-page-lead">CSS layout properties allow you to control the positioning and sizing of elements on a webpage to create a structured, responsive design.</p>
+        </header>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">CSS Layout — The Basics</h2>
+          <p class="lesson-text">CSS layout properties allow you to control the positioning and sizing of elements on a webpage to create a structured design.</p>
+
+          <ul class="lesson-list">
+            <li><strong>Display:</strong> Defines how an element is rendered (<code>block</code>, <code>inline</code>, <code>flex</code>).</li>
+            <li><strong>Flexbox:</strong> Best for one-dimensional layouts (rows or columns).</li>
+            <li><strong>Positioning:</strong> Allows you to place elements using <code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code>.</li>
+          </ul>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">The Display Property</h2>
+          <p class="lesson-text">The <code>display</code> property is the most important CSS property for controlling layout.</p>
+
+          <div class="table-scroll">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Value</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>block</code></td>
+                  <td>Starts on a new line and takes up full width.</td>
+                </tr>
+                <tr>
+                  <td><code>inline</code></td>
+                  <td>Does not start on a new line, takes only width needed.</td>
+                </tr>
+                <tr>
+                  <td><code>flex</code></td>
+                  <td>Enables a flexbox layout for child elements.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="lesson-section" data-flex-playground>
+          <h2 class="lesson-title">Interactive Flexbox Example</h2>
+          <p class="lesson-text">Flexbox is used to align items easily in a container. Click any <code>justify-content</code> value below to see how the items distribute horizontally:</p>
+
+          <div class="example-box">
+            <div class="example-box-header">
+              <span class="example-label">justify-content Controls</span>
+              <div class="flex-playground-controls" role="group" aria-label="Change justify-content alignment">
+                <button type="button" class="flex-chip" data-justify="flex-start" aria-pressed="false">flex-start</button>
+                <button type="button" class="flex-chip" data-justify="center" aria-pressed="false">center</button>
+                <button type="button" class="flex-chip" data-justify="flex-end" aria-pressed="false">flex-end</button>
+                <button type="button" class="flex-chip" data-justify="space-between" aria-pressed="false">space-between</button>
+                <button type="button" class="flex-chip is-active" data-justify="space-around" aria-pressed="true">space-around</button>
+                <button type="button" class="flex-chip" data-justify="space-evenly" aria-pressed="false">space-evenly</button>
+              </div>
+            </div>
+
+            <div class="code-card" data-lang="CSS">
+              <pre><code id="flex-demo-code">.container {
+  display: flex;
+  justify-content: space-around;
+}</code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Live Flex Container Preview</div>
+              <div class="preview-card-body">
+                <div class="flex-demo-stage" id="flex-demo-stage">
+                  <div class="flex-demo-item">Item 1</div>
+                  <div class="flex-demo-item">Item 2</div>
+                  <div class="flex-demo-item">Item 3</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="example-actions">
+              <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Try Flexbox &raquo;</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Video Lesson</h2>
+          <div class="lesson-video-wrapper">
+            <iframe src="https://www.youtube.com/embed/AGDDdsiZ0Ko" title="CSS Layout &amp; Styling Video Lesson" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <nav class="lesson-nav-btns" aria-label="Lesson navigation">
+          <a href="css-boxmodel.html" class="btn btn-secondary">&larr; Previous: CSS Box Model</a>
+          <a href="css-selectors.html" class="btn btn-dark">Next: CSS Selectors &rarr;</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <img src="assets/images/logo.png" alt="CodeStart Academy" width="34" height="34">
+            <span>CodeStart Academy</span>
+          </div>
+          <p class="footer-description">An interactive, beginner-friendly HTML &amp; CSS learning platform built with semantic markup, modern CSS architecture, and vanilla JavaScript.</p>
+        </div>
+
+        <div>
+          <h3>Curriculum</h3>
+          <ul class="footer-links">
+            <li><a href="html-intro.html">HTML Fundamentals</a></li>
+            <li><a href="css-intro.html">CSS Styling &amp; Layout</a></li>
+            <li><a href="css-boxmodel.html">Box Model Visualizer</a></li>
+            <li><a href="exercises.html">Interactive Practice</a></li>
+            <li><a href="cheatsheets.html">Quick Reference Sheets</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Creator</h3>
+          <ul class="footer-links">
+            <li><a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a></li>
+            <li><a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub (@moHaddad1)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeStart Academy. Built by <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a>.</p>
+        <div class="footer-credit-links">
+          <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          <a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

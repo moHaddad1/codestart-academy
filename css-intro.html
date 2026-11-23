@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn what CSS is, why external stylesheets save time, and how CSS controls typography, colors, and responsive web design.">
+  <meta name="author" content="Mohamed Alhaddad">
+  <title>CodeStart Academy — CSS Introduction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="index.html" class="site-brand">
+        <span class="site-logo-box">
+          <img src="assets/images/logo.png" alt="CodeStart Academy Logo" width="42" height="42">
+        </span>
+        <span class="site-brand-text">
+          <span class="site-title">CodeStart Academy</span>
+          <span class="site-subtitle">Coding for Beginners</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html-intro.html">HTML</a></li>
+          <li><a href="css-intro.html" class="active">CSS</a></li>
+          <li><a href="exercises.html">Practice</a></li>
+          <li><a href="cheatsheets.html">Sheets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="lesson-layout">
+
+      <aside class="lesson-sidebar" aria-label="CSS lessons">
+        <h2 class="sidebar-title">CSS Lessons</h2>
+        <ul class="sidebar-links">
+          <li><a href="css-intro.html" class="active">Introduction</a></li>
+          <li><a href="css-boxmodel.html">Box Model</a></li>
+          <li><a href="css-layout.html">Layout</a></li>
+          <li><a href="css-selectors.html">Selectors</a></li>
+        </ul>
+        <div class="sidebar-divider"></div>
+        <a href="exercises.html" class="sidebar-secondary-link">Practice Quiz &rarr;</a>
+        <a href="cheatsheets.html" class="sidebar-secondary-link">CSS Cheatsheet &rarr;</a>
+      </aside>
+
+      <div class="lesson-content">
+
+        <header class="lesson-header">
+          <div class="lesson-header-meta">
+            <span class="badge badge-css">CSS Track</span>
+            <span class="lesson-step-label">Lesson 1 of 4</span>
+          </div>
+          <h1 class="lesson-page-title">CSS Introduction</h1>
+          <p class="lesson-page-lead">CSS is the language we use to style a web page — it controls things like colors, fonts, spacing, and layout across every screen size.</p>
+        </header>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">What is CSS?</h2>
+          <p class="lesson-text">CSS is the language we use to style a web page — it controls things like colors, fonts, spacing, and layout.</p>
+
+          <ul class="lesson-list">
+            <li>CSS stands for <strong>Cascading Style Sheets</strong></li>
+            <li>CSS describes how HTML elements should be displayed on screen, paper, or other media</li>
+            <li>CSS saves a lot of work — one stylesheet can control the look of many pages at once</li>
+            <li>External stylesheets are saved in <code>.css</code> files and linked to your HTML</li>
+          </ul>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Why Use CSS?</h2>
+          <p class="lesson-text">CSS is used to define the style of your web pages — the design, layout, and how things look on different screen sizes and devices.</p>
+
+          <div class="example-box">
+            <div class="example-box-header">
+              <span class="example-label">Example</span>
+            </div>
+            <div class="code-card" data-lang="CSS">
+              <pre><code><span class="tok-tag">body</span> {
+  <span class="tok-prop">background-color</span>: <span class="tok-val">lightblue</span>;
+}
+
+<span class="tok-tag">h1</span> {
+  <span class="tok-prop">color</span>: <span class="tok-val">white</span>;
+  <span class="tok-prop">text-align</span>: <span class="tok-val">center</span>;
+}
+
+<span class="tok-tag">p</span> {
+  <span class="tok-prop">font-family</span>: <span class="tok-val">verdana</span>;
+  <span class="tok-prop">font-size</span>: <span class="tok-val">20px</span>;
+}</code></pre>
+            </div>
+            <div class="example-actions">
+              <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_intro" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Try it Yourself &raquo;</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">CSS Saves a Lot of Work!</h2>
+          <p class="lesson-text">CSS rules are normally written in an external <code>.css</code> file that you link to your HTML pages.</p>
+          <p class="lesson-text">The big advantage is that if you want to change the look of your whole website, you only have to edit one file instead of changing every single HTML page.</p>
+
+          <div class="note-box note-info">
+            <p><strong>Tip:</strong> This is why keeping your CSS separate from your HTML is considered best practice — it makes your project way easier to manage.</p>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Video Lesson</h2>
+          <div class="lesson-video-wrapper">
+            <iframe src="https://www.youtube.com/embed/AGDDdsiZ0Ko" title="CSS Introduction Video Lesson" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <nav class="lesson-nav-btns" aria-label="Lesson navigation">
+          <a href="html-forms.html" class="btn btn-secondary">&larr; Previous: HTML Forms</a>
+          <a href="css-boxmodel.html" class="btn btn-dark">Next: CSS Box Model &rarr;</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <img src="assets/images/logo.png" alt="CodeStart Academy" width="34" height="34">
+            <span>CodeStart Academy</span>
+          </div>
+          <p class="footer-description">An interactive, beginner-friendly HTML &amp; CSS learning platform built with semantic markup, modern CSS architecture, and vanilla JavaScript.</p>
+        </div>
+
+        <div>
+          <h3>Curriculum</h3>
+          <ul class="footer-links">
+            <li><a href="html-intro.html">HTML Fundamentals</a></li>
+            <li><a href="css-intro.html">CSS Styling &amp; Layout</a></li>
+            <li><a href="css-boxmodel.html">Box Model Visualizer</a></li>
+            <li><a href="exercises.html">Interactive Practice</a></li>
+            <li><a href="cheatsheets.html">Quick Reference Sheets</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Creator</h3>
+          <ul class="footer-links">
+            <li><a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a></li>
+            <li><a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub (@moHaddad1)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeStart Academy. Built by <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a>.</p>
+        <div class="footer-credit-links">
+          <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          <a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

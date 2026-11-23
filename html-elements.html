@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore core HTML elements including headings, paragraphs, hyperlinks, line breaks, and buttons with live examples.">
+  <meta name="author" content="Mohamed Alhaddad">
+  <title>CodeStart Academy — HTML Elements</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="index.html" class="site-brand">
+        <span class="site-logo-box">
+          <img src="assets/images/logo.png" alt="CodeStart Academy Logo" width="42" height="42">
+        </span>
+        <span class="site-brand-text">
+          <span class="site-title">CodeStart Academy</span>
+          <span class="site-subtitle">Coding for Beginners</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html-intro.html" class="active">HTML</a></li>
+          <li><a href="css-intro.html">CSS</a></li>
+          <li><a href="exercises.html">Practice</a></li>
+          <li><a href="cheatsheets.html">Sheets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="lesson-layout">
+
+      <aside class="lesson-sidebar" aria-label="HTML lessons">
+        <h2 class="sidebar-title">HTML Lessons</h2>
+        <ul class="sidebar-links">
+          <li><a href="html-intro.html">Introduction</a></li>
+          <li><a href="html-elements.html" class="active">Elements</a></li>
+          <li><a href="html-tables.html">Tables</a></li>
+          <li><a href="html-layout.html">Layout</a></li>
+          <li><a href="html-forms.html">Forms</a></li>
+        </ul>
+        <div class="sidebar-divider"></div>
+        <a href="exercises.html" class="sidebar-secondary-link">Practice Quiz &rarr;</a>
+        <a href="cheatsheets.html" class="sidebar-secondary-link">HTML Cheatsheet &rarr;</a>
+      </aside>
+
+      <div class="lesson-content">
+
+        <header class="lesson-header">
+          <div class="lesson-header-meta">
+            <span class="badge badge-html">HTML Track</span>
+            <span class="lesson-step-label">Lesson 2 of 5</span>
+          </div>
+          <h1 class="lesson-page-title">HTML Elements</h1>
+          <p class="lesson-page-lead">An HTML element is the basic building block of a webpage. Each element is written using tags that describe the meaning and display of content.</p>
+        </header>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">1. Headings</h2>
+          <p class="lesson-text">Headings are used for titles and section hierarchy, ranging from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code>:</p>
+
+          <div class="example-box">
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;h1&gt;</span>This is h1<span class="tok-tag">&lt;/h1&gt;</span>
+<span class="tok-tag">&lt;h2&gt;</span>This is h2<span class="tok-tag">&lt;/h2&gt;</span>
+<span class="tok-tag">&lt;h3&gt;</span>This is h3<span class="tok-tag">&lt;/h3&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Live Preview</div>
+              <div class="preview-card-body">
+                <p class="demo-rendered-h1">This is h1</p>
+                <p class="demo-rendered-h2">This is h2</p>
+                <p class="demo-rendered-h3">This is h3</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">2. Paragraph</h2>
+          <p class="lesson-text">Paragraph elements (<code>&lt;p&gt;</code>) organize blocks of text and automatically add spacing between paragraphs:</p>
+
+          <div class="example-box">
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;p&gt;</span>This is a simple paragraph.<span class="tok-tag">&lt;/p&gt;</span>
+<span class="tok-tag">&lt;p&gt;</span>This is another paragraph to show how the text appears on the page.<span class="tok-tag">&lt;/p&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Live Preview</div>
+              <div class="preview-card-body">
+                <p class="lesson-text">This is a simple paragraph.</p>
+                <p class="lesson-text">This is another paragraph to show how the text appears on the page.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">3. Links</h2>
+          <p class="lesson-text">Links are used to move between pages using the anchor tag <code>&lt;a&gt;</code> and its <code>href</code> attribute:</p>
+
+          <div class="example-box">
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;a</span> <span class="tok-attr">href</span>=<span class="tok-str">"https://www.google.com"</span> <span class="tok-attr">target</span>=<span class="tok-str">"_blank"</span><span class="tok-tag">&gt;</span>Visit Google<span class="tok-tag">&lt;/a&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Live Preview</div>
+              <div class="preview-card-body">
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="demo-rendered-link">Visit Google &nearr;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">4. Line Break</h2>
+          <p class="lesson-text">Use the empty <code>&lt;br&gt;</code> element when you need a single line break without starting a new paragraph:</p>
+
+          <div class="example-box">
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;p&gt;</span>
+  This is line one<span class="tok-tag">&lt;br&gt;</span>
+  This is line two<span class="tok-tag">&lt;br&gt;</span>
+  This is line three
+<span class="tok-tag">&lt;/p&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-card-bar">Live Preview</div>
+              <div class="preview-card-body">
+                <p>
+                  This is line one<br>
+                  This is line two<br>
+                  This is line three
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">5. Multiple Elements Together</h2>
+          <p class="lesson-text">You can combine different elements in one section — such as text, links, line breaks, and clickable buttons:</p>
+
+          <div class="example-box">
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;p&gt;</span>
+  You can combine different elements in one section like this:<span class="tok-tag">&lt;br&gt;</span>
+  <span class="tok-tag">&lt;a</span> <span class="tok-attr">href</span>=<span class="tok-str">"#combined-demo"</span><span class="tok-tag">&gt;</span>Simple Link<span class="tok-tag">&lt;/a&gt;</span><span class="tok-tag">&lt;br&gt;</span>
+  <span class="tok-tag">&lt;button</span> <span class="tok-attr">type</span>=<span class="tok-str">"button"</span><span class="tok-tag">&gt;</span>Simple Button<span class="tok-tag">&lt;/button&gt;</span>
+<span class="tok-tag">&lt;/p&gt;</span></code></pre>
+            </div>
+
+            <div class="preview-card" id="combined-demo">
+              <div class="preview-card-bar">Live Preview</div>
+              <div class="preview-card-body">
+                <p>
+                  You can combine different elements in one section like this:<br>
+                  <a href="#combined-demo" class="demo-rendered-link">Simple Link</a><br>
+                  <button type="button" class="demo-rendered-btn" data-demo-click="elements-btn-status">Simple Button</button>
+                </p>
+                <div id="elements-btn-status" class="form-feedback" role="status" aria-live="polite"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Video Lesson</h2>
+          <div class="lesson-video-wrapper">
+            <iframe src="https://www.youtube.com/embed/vIoO52MdZFE?si=OhWM0VEgy2lVVi9R" title="HTML Elements Video Lesson" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <nav class="lesson-nav-btns" aria-label="Lesson navigation">
+          <a href="html-intro.html" class="btn btn-secondary">&larr; Previous: HTML Introduction</a>
+          <a href="html-tables.html" class="btn btn-dark">Next: HTML Tables &rarr;</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <img src="assets/images/logo.png" alt="CodeStart Academy" width="34" height="34">
+            <span>CodeStart Academy</span>
+          </div>
+          <p class="footer-description">An interactive, beginner-friendly HTML &amp; CSS learning platform built with semantic markup, modern CSS architecture, and vanilla JavaScript.</p>
+        </div>
+
+        <div>
+          <h3>Curriculum</h3>
+          <ul class="footer-links">
+            <li><a href="html-intro.html">HTML Fundamentals</a></li>
+            <li><a href="css-intro.html">CSS Styling &amp; Layout</a></li>
+            <li><a href="css-boxmodel.html">Box Model Visualizer</a></li>
+            <li><a href="exercises.html">Interactive Practice</a></li>
+            <li><a href="cheatsheets.html">Quick Reference Sheets</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Creator</h3>
+          <ul class="footer-links">
+            <li><a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a></li>
+            <li><a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub (@moHaddad1)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeStart Academy. Built by <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a>.</p>
+        <div class="footer-credit-links">
+          <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          <a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

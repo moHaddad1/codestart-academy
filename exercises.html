@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice HTML, CSS, and JavaScript fundamentals with interactive exercises, instant feedback, hints, and live scoring.">
+  <meta name="author" content="Mohamed Alhaddad">
+  <title>CodeStart Academy — Interactive Practice Exercises</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="index.html" class="site-brand">
+        <span class="site-logo-box">
+          <img src="assets/images/logo.png" alt="CodeStart Academy Logo" width="42" height="42">
+        </span>
+        <span class="site-brand-text">
+          <span class="site-title">CodeStart Academy</span>
+          <span class="site-subtitle">Coding for Beginners</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html-intro.html">HTML</a></li>
+          <li><a href="css-intro.html">CSS</a></li>
+          <li><a href="exercises.html" class="active">Practice</a></li>
+          <li><a href="cheatsheets.html">Sheets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="lesson-layout">
+
+      <aside class="lesson-sidebar" aria-label="Practice navigation">
+        <h2 class="sidebar-title">Practice Center</h2>
+        <ul class="sidebar-links">
+          <li><a href="exercises.html" class="active">Interactive Quiz</a></li>
+          <li><a href="cheatsheets.html">Review Sheets</a></li>
+          <li><a href="css-boxmodel.html">Box Model Lab</a></li>
+        </ul>
+        <div class="sidebar-divider"></div>
+        <a href="html-intro.html" class="sidebar-secondary-link">Review HTML Lessons &rarr;</a>
+        <a href="css-intro.html" class="sidebar-secondary-link">Review CSS Lessons &rarr;</a>
+      </aside>
+
+      <div class="lesson-content" data-quiz-root>
+
+        <header class="lesson-header">
+          <div class="lesson-header-meta">
+            <span class="badge badge-success">Practice Center</span>
+            <span class="lesson-step-label">8 Interactive Questions</span>
+          </div>
+          <h1 class="lesson-page-title">Interactive Exercises</h1>
+          <p class="lesson-page-lead">Select the correct answer for each challenge and click Check Answer for instant validation, explanations, and hints.</p>
+        </header>
+
+        <div class="quiz-scoreboard" role="region" aria-label="Quiz progress and score">
+          <div class="quiz-scoreboard-top">
+            <div class="quiz-stats-group">
+              <div class="quiz-stat">
+                <span class="quiz-stat-label">Score</span>
+                <span class="quiz-stat-value" id="quiz-score">0 / 8</span>
+              </div>
+              <div class="quiz-stat">
+                <span class="quiz-stat-label">Answered</span>
+                <span class="quiz-stat-value" id="quiz-answered">0 / 8</span>
+              </div>
+              <div class="quiz-stat">
+                <span class="quiz-stat-label">Accuracy</span>
+                <span class="quiz-stat-value" id="quiz-accuracy">0%</span>
+              </div>
+            </div>
+
+            <div class="filter-pills" role="group" aria-label="Filter exercises by topic">
+              <button type="button" class="filter-pill is-active" data-quiz-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="filter-pill" data-quiz-filter="html" aria-pressed="false">HTML</button>
+              <button type="button" class="filter-pill" data-quiz-filter="css" aria-pressed="false">CSS</button>
+              <button type="button" class="filter-pill" data-quiz-filter="js" aria-pressed="false">JS</button>
+              <button type="button" id="quiz-reset-btn" class="btn btn-secondary btn-sm">Reset</button>
+            </div>
+          </div>
+
+          <div class="quiz-progress-track" aria-hidden="true">
+            <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+          </div>
+        </div>
+
+        <div id="quiz-completion-banner" class="quiz-completion-banner" role="status" aria-live="polite">
+          <h3>Challenge Complete!</h3>
+          <p id="quiz-completion-text"></p>
+          <button type="button" id="quiz-completion-reset" class="btn btn-primary">Try Again</button>
+        </div>
+
+        <div class="quiz-list">
+
+          <article class="quiz-card" data-category="html" data-answer="ol" data-feedback-correct="Correct! The &lt;ol&gt; element creates a numbered Ordered List, while &lt;ul&gt; is unordered and &lt;li&gt; represents each list item." data-feedback-wrong="Not quite — &lt;ul&gt; creates bullet points and &lt;li&gt; defines a single list item. Try again!">
+            <div class="quiz-card-header">
+              <span class="quiz-number">Question 1</span>
+              <span class="badge badge-html">HTML</span>
+            </div>
+            <h2 class="quiz-question">Which element is used to create an ordered list?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q1" value="ul">
+                <span><code>&lt;ul&gt;</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q1" value="ol">
+                <span><code>&lt;ol&gt;</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q1" value="li">
+                <span><code>&lt;li&gt;</code></span>
+              </label>
+            </div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-action="check">Check Answer</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-action="hint" aria-expanded="false">Show Hint</button>
+            </div>
+            <div class="quiz-hint-box"><strong>Hint:</strong> Look at the initials of "Ordered List".</div>
+            <div class="quiz-feedback" role="status" aria-live="polite"></div>
+          </article>
+
+          <article class="quiz-card" data-category="js" data-answer="let" data-feedback-correct="Correct! 'let' declares a block-scoped variable in modern JavaScript (alongside 'const' for constants)." data-feedback-wrong="Not quite — 'variable' and 'make' are not JavaScript keywords. Check the hint and try again!">
+            <div class="quiz-card-header">
+              <span class="quiz-number">Question 2</span>
+              <span class="badge badge-js">JavaScript</span>
+            </div>
+            <h2 class="quiz-question">Which keyword declares a variable in JavaScript?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q2" value="variable">
+                <span><code>variable</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q2" value="let">
+                <span><code>let</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q2" value="make">
+                <span><code>make</code></span>
+              </label>
+            </div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-action="check">Check Answer</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-action="hint" aria-expanded="false">Show Hint</button>
+            </div>
+            <div class="quiz-hint-box"><strong>Hint:</strong> It is a short three-letter ES6 keyword used to define variables whose value can be reassigned.</div>
+            <div class="quiz-feedback" role="status" aria-live="polite"></div>
+          </article>
+
+          <article class="quiz-card" data-category="html" data-answer="name" data-feedback-correct="Correct! Without a 'name' attribute, an input field's value is omitted when the HTML form is submitted." data-feedback-wrong="Not quite — 'id' binds a &lt;label&gt; and 'placeholder' shows hint text, but another attribute is required for form submission.">
+            <div class="quiz-card-header">
+              <span class="quiz-number">Question 3</span>
+              <span class="badge badge-html">HTML Forms</span>
+            </div>
+            <h2 class="quiz-question">Which attribute MUST an <code>&lt;input&gt;</code> field have so its value is sent when a form is submitted?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q3" value="id">
+                <span><code>id</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q3" value="name">
+                <span><code>name</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q3" value="placeholder">
+                <span><code>placeholder</code></span>
+              </label>
+            </div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-action="check">Check Answer</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-action="hint" aria-expanded="false">Show Hint</button>
+            </div>
+            <div class="quiz-hint-box"><strong>Hint:</strong> Review the last section of the HTML Forms lesson — it acts as the key in the submitted key/value pair.</div>
+            <div class="quiz-feedback" role="status" aria-live="polite"></div>
+          </article>
+
+          <article class="quiz-card" data-category="html" data-answer="th" data-feedback-correct="Correct! &lt;th&gt; stands for Table Header and browsers render it bold and centered by default." data-feedback-wrong="Not quite — &lt;tr&gt; creates a row and &lt;td&gt; creates a standard data cell. Try again!">
+            <div class="quiz-card-header">
+              <span class="quiz-number">Question 4</span>
+              <span class="badge badge-html">HTML Tables</span>
+            </div>
+            <h2 class="quiz-question">Which HTML tag defines a header cell inside a table row?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q4" value="td">
+                <span><code>&lt;td&gt;</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q4" value="tr">
+                <span><code>&lt;tr&gt;</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q4" value="th">
+                <span><code>&lt;th&gt;</code></span>
+              </label>
+            </div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-action="check">Check Answer</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-action="hint" aria-expanded="false">Show Hint</button>
+            </div>
+            <div class="quiz-hint-box"><strong>Hint:</strong> "td" = table data, "tr" = table row, so what is "table header"?</div>
+            <div class="quiz-feedback" role="status" aria-live="polite"></div>
+          </article>
+
+          <article class="quiz-card" data-category="css" data-answer="padding" data-feedback-correct="Correct! Padding creates breathing room inside the border, right around the element's content." data-feedback-wrong="Not quite — margin sits outside the border, while border is the line itself. Try again!">
+            <div class="quiz-card-header">
+              <span class="quiz-number">Question 5</span>
+              <span class="badge badge-css">CSS Box Model</span>
+            </div>
+            <h2 class="quiz-question">In the CSS Box Model, which property controls the space between the content and the border?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q5" value="margin">
+                <span><code>margin</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q5" value="padding">
+                <span><code>padding</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q5" value="border">
+                <span><code>border</code></span>
+              </label>
+            </div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-action="check">Check Answer</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-action="hint" aria-expanded="false">Show Hint</button>
+            </div>
+            <div class="quiz-hint-box"><strong>Hint:</strong> From inside out, the Box Model order is: Content &rarr; ? &rarr; Border &rarr; Margin.</div>
+            <div class="quiz-feedback" role="status" aria-live="polite"></div>
+          </article>
+
+          <article class="quiz-card" data-category="css" data-answer="hash" data-feedback-correct="Correct! A hash (#) targets a unique element by its id attribute, whereas a dot (.) targets reusable classes." data-feedback-wrong="Not quite — a dot (.) selects a class, and a space creates a descendant selector. Try again!">
+            <div class="quiz-card-header">
+              <span class="quiz-number">Question 6</span>
+              <span class="badge badge-css">CSS Selectors</span>
+            </div>
+            <h2 class="quiz-question">Which prefix symbol is used in CSS to select an element by its unique <code>id</code>?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q6" value="dot">
+                <span>Dot (<code>.header-main</code>)</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q6" value="hash">
+                <span>Hash (<code>#header-main</code>)</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q6" value="star">
+                <span>Asterisk (<code>*header-main</code>)</span>
+              </label>
+            </div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-action="check">Check Answer</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-action="hint" aria-expanded="false">Show Hint</button>
+            </div>
+            <div class="quiz-hint-box"><strong>Hint:</strong> Remember the CSS Selectors lesson: class uses a dot (.), ID uses a # symbol.</div>
+            <div class="quiz-feedback" role="status" aria-live="polite"></div>
+          </article>
+
+          <article class="quiz-card" data-category="css" data-answer="flex" data-feedback-correct="Correct! Setting display: flex turns a container into a Flexbox layout so child items can be aligned easily." data-feedback-wrong="Not quite — block stacks elements vertically and inline flows text horizontally without Flexbox alignment.">
+            <div class="quiz-card-header">
+              <span class="quiz-number">Question 7</span>
+              <span class="badge badge-css">CSS Layout</span>
+            </div>
+            <h2 class="quiz-question">Which <code>display</code> value enables a Flexbox layout for child elements?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q7" value="block">
+                <span><code>display: block;</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q7" value="inline">
+                <span><code>display: inline;</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q7" value="flex">
+                <span><code>display: flex;</code></span>
+              </label>
+            </div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-action="check">Check Answer</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-action="hint" aria-expanded="false">Show Hint</button>
+            </div>
+            <div class="quiz-hint-box"><strong>Hint:</strong> Once enabled, properties like <code>justify-content: space-around;</code> start working on the container.</div>
+            <div class="quiz-feedback" role="status" aria-live="polite"></div>
+          </article>
+
+          <article class="quiz-card" data-category="js" data-answer="strict" data-feedback-correct="Correct! === checks strict equality (both value AND data type), avoiding unexpected type coercion." data-feedback-wrong="Not quite — = is assignment and == compares values after type conversion. Try again!">
+            <div class="quiz-card-header">
+              <span class="quiz-number">Question 8</span>
+              <span class="badge badge-js">JavaScript</span>
+            </div>
+            <h2 class="quiz-question">Which JavaScript comparison operator checks that both value AND data type are equal?</h2>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q8" value="assign">
+                <span><code>=</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q8" value="loose">
+                <span><code>==</code></span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q8" value="strict">
+                <span><code>===</code></span>
+              </label>
+            </div>
+            <div class="quiz-actions">
+              <button type="button" class="btn btn-primary btn-sm" data-action="check">Check Answer</button>
+              <button type="button" class="btn btn-secondary btn-sm" data-action="hint" aria-expanded="false">Show Hint</button>
+            </div>
+            <div class="quiz-hint-box"><strong>Hint:</strong> Look at the Comparison row in the JavaScript Operators cheatsheet — strict equality uses three equals signs.</div>
+            <div class="quiz-feedback" role="status" aria-live="polite"></div>
+          </article>
+
+        </div>
+
+        <nav class="lesson-nav-btns" aria-label="Lesson navigation">
+          <a href="css-selectors.html" class="btn btn-secondary">&larr; Previous: CSS Selectors</a>
+          <a href="cheatsheets.html" class="btn btn-dark">Next: Quick Reference Sheets &rarr;</a>
+        </nav>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <img src="assets/images/logo.png" alt="CodeStart Academy" width="34" height="34">
+            <span>CodeStart Academy</span>
+          </div>
+          <p class="footer-description">An interactive, beginner-friendly HTML &amp; CSS learning platform built with semantic markup, modern CSS architecture, and vanilla JavaScript.</p>
+        </div>
+
+        <div>
+          <h3>Curriculum</h3>
+          <ul class="footer-links">
+            <li><a href="html-intro.html">HTML Fundamentals</a></li>
+            <li><a href="css-intro.html">CSS Styling &amp; Layout</a></li>
+            <li><a href="css-boxmodel.html">Box Model Visualizer</a></li>
+            <li><a href="exercises.html">Interactive Practice</a></li>
+            <li><a href="cheatsheets.html">Quick Reference Sheets</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Creator</h3>
+          <ul class="footer-links">
+            <li><a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a></li>
+            <li><a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub (@moHaddad1)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeStart Academy. Built by <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a>.</p>
+        <div class="footer-credit-links">
+          <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          <a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

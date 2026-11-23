@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Searchable HTML, CSS, and JavaScript quick-reference cheatsheets with copy-ready code snippets.">
+  <meta name="author" content="Mohamed Alhaddad">
+  <title>CodeStart Academy — Quick Reference Cheatsheets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="index.html" class="site-brand">
+        <span class="site-logo-box">
+          <img src="assets/images/logo.png" alt="CodeStart Academy Logo" width="42" height="42">
+        </span>
+        <span class="site-brand-text">
+          <span class="site-title">CodeStart Academy</span>
+          <span class="site-subtitle">Coding for Beginners</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html-intro.html">HTML</a></li>
+          <li><a href="css-intro.html">CSS</a></li>
+          <li><a href="exercises.html">Practice</a></li>
+          <li><a href="cheatsheets.html" class="active">Sheets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container" data-cheatsheet-root>
+
+      <header class="page-banner">
+        <div class="lesson-header-meta">
+          <span class="badge badge-accent">Quick Reference</span>
+          <span class="lesson-step-label">Press <kbd>/</kbd> to search instantly</span>
+        </div>
+        <h1>CodeStart Quick Reference Sheets</h1>
+        <p>Review the core concepts of HTML, CSS, and JavaScript covered in our lessons. Filter by category or search any tag, property, or operator on the fly.</p>
+      </header>
+
+      <div class="cheatsheet-toolbar" role="region" aria-label="Search and filter cheatsheets">
+        <div class="search-input-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <label for="cheatsheet-search" class="sr-only">Search HTML tags, CSS properties, or JS operators</label>
+          <input type="search" id="cheatsheet-search" class="search-input" placeholder="Search tags, properties, operators (e.g. flex, form, text-align)..." autocomplete="off">
+          <button type="button" id="cheatsheet-search-clear" class="search-clear-btn" aria-label="Clear search">&times;</button>
+        </div>
+
+        <div class="filter-pills" role="group" aria-label="Filter by category">
+          <button type="button" class="filter-pill is-active" data-filter-category="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-pill" data-filter-category="html" aria-pressed="false">HTML</button>
+          <button type="button" class="filter-pill" data-filter-category="css" aria-pressed="false">CSS</button>
+          <button type="button" class="filter-pill" data-filter-category="js" aria-pressed="false">JavaScript</button>
+        </div>
+      </div>
+
+      <p id="cheatsheet-status" class="cheatsheet-status" aria-live="polite"></p>
+
+      <div class="cheatsheet-sections">
+
+        <section class="lesson-section" data-cheat-section data-category="html">
+          <div class="cheatsheet-section-header">
+            <h2>HTML Basic Elements</h2>
+            <span class="badge badge-html">HTML</span>
+          </div>
+
+          <div class="table-scroll">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Tag</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-cheat-item data-keywords="html root document">
+                  <td><code>&lt;html&gt;</code></td>
+                  <td>Considered the root element of any HTML document. Contains the head and body.</td>
+                </tr>
+                <tr data-cheat-item data-keywords="head metadata title link">
+                  <td><code>&lt;head&gt;</code></td>
+                  <td>Contains information necessary for the document's display (Title, Meta).</td>
+                </tr>
+                <tr data-cheat-item data-keywords="headings h1 h2 h3 h4 h5 h6 title">
+                  <td><code>&lt;h1&gt; to &lt;h6&gt;</code></td>
+                  <td>Headings, from Level 1 (largest) down to Level 6.</td>
+                </tr>
+                <tr data-cheat-item data-keywords="paragraph text p">
+                  <td><code>&lt;p&gt;</code></td>
+                  <td>Groups sentences and sections of text together (Paragraph).</td>
+                </tr>
+                <tr data-cheat-item data-keywords="br line break void empty">
+                  <td><code>&lt;br&gt;</code></td>
+                  <td>A void element that causes the next element or text to display on a new line.</td>
+                </tr>
+                <tr data-cheat-item data-keywords="ul ol li list bullets ordered unordered">
+                  <td><code>&lt;ul&gt; / &lt;ol&gt;</code></td>
+                  <td>Unordered List (bullet points) / Ordered List (numbers or letters).</td>
+                </tr>
+                <tr data-cheat-item data-keywords="anchor link hyperlink href a">
+                  <td><code>&lt;a href="..."&gt;</code></td>
+                  <td>The anchor element, specifies a hyperlink reference to a file or URL.</td>
+                </tr>
+                <tr data-cheat-item data-keywords="img image src alt picture">
+                  <td><code>&lt;img src="..."&gt;</code></td>
+                  <td>Configures graphics/images on a web page. Uses the alt attribute for alternate text.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="lesson-section" data-cheat-section data-category="html">
+          <div class="cheatsheet-section-header">
+            <h2>HTML5 Layout, Tables &amp; Forms</h2>
+            <span class="badge badge-html">HTML</span>
+          </div>
+
+          <div class="table-scroll">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Tag</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-cheat-item data-keywords="div container block wrapper layout">
+                  <td><code>&lt;div&gt;</code></td>
+                  <td>Generic block-level container used to group elements for styling or scripting.</td>
+                </tr>
+                <tr data-cheat-item data-keywords="header nav main footer semantic html5">
+                  <td><code>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt;</code></td>
+                  <td>Semantic HTML5 landmark elements that define page structure clearly.</td>
+                </tr>
+                <tr data-cheat-item data-keywords="table tr th td thead tbody rows columns">
+                  <td><code>&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</code></td>
+                  <td>Defines tabular data with rows (<code>&lt;tr&gt;</code>), header cells (<code>&lt;th&gt;</code>), and data cells (<code>&lt;td&gt;</code>).</td>
+                </tr>
+                <tr data-cheat-item data-keywords="form input label submit text radio checkbox name">
+                  <td><code>&lt;form&gt;, &lt;label&gt;, &lt;input&gt;</code></td>
+                  <td>Collects user input via text fields, radio buttons, checkboxes, and submit buttons. Bind labels with <code>for</code> &amp; <code>id</code>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div data-cheat-item data-keywords="html5 boilerplate template starter snippet">
+            <div class="code-card" data-lang="HTML Boilerplate">
+              <pre><code><span class="tok-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tok-tag">&lt;html</span> <span class="tok-attr">lang</span>=<span class="tok-str">"en"</span><span class="tok-tag">&gt;</span>
+<span class="tok-tag">&lt;head&gt;</span>
+  <span class="tok-tag">&lt;meta</span> <span class="tok-attr">charset</span>=<span class="tok-str">"UTF-8"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;meta</span> <span class="tok-attr">name</span>=<span class="tok-str">"viewport"</span> <span class="tok-attr">content</span>=<span class="tok-str">"width=device-width, initial-scale=1.0"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;title&gt;</span>Document<span class="tok-tag">&lt;/title&gt;</span>
+<span class="tok-tag">&lt;/head&gt;</span>
+<span class="tok-tag">&lt;body&gt;</span>
+  <span class="tok-tag">&lt;main&gt;</span><span class="tok-tag">&lt;h1&gt;</span>Hello World<span class="tok-tag">&lt;/h1&gt;</span><span class="tok-tag">&lt;/main&gt;</span>
+<span class="tok-tag">&lt;/body&gt;</span>
+<span class="tok-tag">&lt;/html&gt;</span></code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section" data-cheat-section data-category="css">
+          <div class="cheatsheet-section-header">
+            <h2>CSS Text Properties</h2>
+            <span class="badge badge-css">CSS</span>
+          </div>
+
+          <div class="table-scroll">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Common Values / Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-cheat-item data-keywords="text-align alignment center left right justify">
+                  <td><code>text-align</code></td>
+                  <td><code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code>, <code>start</code>, <code>end</code></td>
+                </tr>
+                <tr data-cheat-item data-keywords="font-weight bold thickness typography">
+                  <td><code>font-weight</code></td>
+                  <td><code>bold</code>, <code>lighter</code>, <code>100</code> to <code>900</code></td>
+                </tr>
+                <tr data-cheat-item data-keywords="text-decoration underline overline line-through">
+                  <td><code>text-decoration</code></td>
+                  <td><code>underline</code>, <code>overline</code>, <code>line-through</code>, <code>none</code></td>
+                </tr>
+                <tr data-cheat-item data-keywords="text-decoration-style solid double dotted dashed wavy">
+                  <td><code>text-decoration-style</code></td>
+                  <td><code>solid</code>, <code>double</code>, <code>dotted</code>, <code>dashed</code>, <code>wavy</code></td>
+                </tr>
+                <tr data-cheat-item data-keywords="line-height leading spacing typography">
+                  <td><code>line-height</code></td>
+                  <td>Sets the height between two lines (e.g., <code>normal</code>, <code>1.5</code>, <code>2.5</code>)</td>
+                </tr>
+                <tr data-cheat-item data-keywords="letter-spacing tracking kerning">
+                  <td><code>letter-spacing</code></td>
+                  <td>Controls the horizontal space between letters (e.g., <code>normal</code>, <code>10px</code>)</td>
+                </tr>
+                <tr data-cheat-item data-keywords="font-family typeface fonts sans-serif">
+                  <td><code>font-family</code></td>
+                  <td>Specifies a prioritized list of font family names (e.g., <code>Arial, sans-serif</code>)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="lesson-section" data-cheat-section data-category="css">
+          <div class="cheatsheet-section-header">
+            <h2>CSS Box Model, Layout &amp; Selectors</h2>
+            <span class="badge badge-css">CSS</span>
+          </div>
+
+          <div class="table-scroll">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Property / Selector</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-cheat-item data-keywords="margin padding border box model spacing">
+                  <td><code>padding</code> / <code>border</code> / <code>margin</code></td>
+                  <td>Controls inner space around content, the border line, and outer space separating elements.</td>
+                </tr>
+                <tr data-cheat-item data-keywords="box-sizing border-box content-box width">
+                  <td><code>box-sizing</code></td>
+                  <td><code>content-box</code> (default) or <code>border-box</code> (includes padding and border within <code>width</code>).</td>
+                </tr>
+                <tr data-cheat-item data-keywords="display block inline flex flexbox layout">
+                  <td><code>display</code></td>
+                  <td>Controls rendering behavior: <code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>flex</code>, <code>grid</code>.</td>
+                </tr>
+                <tr data-cheat-item data-keywords="justify-content align-items flexbox alignment">
+                  <td><code>justify-content</code></td>
+                  <td>Aligns flex items along the main axis: <code>flex-start</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>.</td>
+                </tr>
+                <tr data-cheat-item data-keywords="selectors element class id descendant dot hash">
+                  <td><code>p</code>, <code>.class</code>, <code>#id</code>, <code>nav a</code></td>
+                  <td>Targets elements by tag name, reusable class (<code>.</code>), unique ID (<code>#</code>), or descendant hierarchy.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div data-cheat-item data-keywords="css flexbox center box-sizing reset snippet">
+            <div class="code-card" data-lang="CSS Flexbox Starter">
+              <pre><code><span class="tok-tag">*</span> {
+  <span class="tok-prop">box-sizing</span>: <span class="tok-val">border-box</span>;
+}
+
+<span class="tok-tag">.flex-container</span> {
+  <span class="tok-prop">display</span>: <span class="tok-val">flex</span>;
+  <span class="tok-prop">justify-content</span>: <span class="tok-val">space-between</span>;
+  <span class="tok-prop">align-items</span>: <span class="tok-val">center</span>;
+  <span class="tok-prop">gap</span>: <span class="tok-val">16px</span>;
+}</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson-section" data-cheat-section data-category="js">
+          <div class="cheatsheet-section-header">
+            <h2>JavaScript Operators</h2>
+            <span class="badge badge-js">JavaScript</span>
+          </div>
+
+          <div class="table-scroll">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Operator Type</th>
+                  <th>Operators &amp; Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-cheat-item data-keywords="arithmetic math add subtract multiply divide modulo power">
+                  <td><strong>Arithmetic</strong></td>
+                  <td><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, <code>**</code></td>
+                </tr>
+                <tr data-cheat-item data-keywords="unary increment decrement">
+                  <td><strong>Unary</strong></td>
+                  <td><code>++</code>, <code>--</code></td>
+                </tr>
+                <tr data-cheat-item data-keywords="assignment equals assign">
+                  <td><strong>Assignment</strong></td>
+                  <td><code>=</code>, <code>+=</code>, <code>-=</code>, <code>/=</code>, <code>*=</code>, <code>%=</code></td>
+                </tr>
+                <tr data-cheat-item data-keywords="comparison equality strict greater less">
+                  <td><strong>Comparison</strong></td>
+                  <td><code>==</code>, <code>===</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></td>
+                </tr>
+                <tr data-cheat-item data-keywords="logical and or not boolean">
+                  <td><strong>Logical</strong></td>
+                  <td><code>&amp;&amp;</code> (and), <code>||</code> (or), <code>!</code> (not)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+
+      <div id="cheatsheet-empty" class="cheatsheet-empty" role="status">
+        <h3>No matching references found</h3>
+        <p>Try searching for another HTML tag, CSS property, or JavaScript operator.</p>
+        <button type="button" id="cheatsheet-reset-empty" class="btn btn-primary">Reset Search &amp; Filters</button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <img src="assets/images/logo.png" alt="CodeStart Academy" width="34" height="34">
+            <span>CodeStart Academy</span>
+          </div>
+          <p class="footer-description">An interactive, beginner-friendly HTML &amp; CSS learning platform built with semantic markup, modern CSS architecture, and vanilla JavaScript.</p>
+        </div>
+
+        <div>
+          <h3>Curriculum</h3>
+          <ul class="footer-links">
+            <li><a href="html-intro.html">HTML Fundamentals</a></li>
+            <li><a href="css-intro.html">CSS Styling &amp; Layout</a></li>
+            <li><a href="css-boxmodel.html">Box Model Visualizer</a></li>
+            <li><a href="exercises.html">Interactive Practice</a></li>
+            <li><a href="cheatsheets.html">Quick Reference Sheets</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Creator</h3>
+          <ul class="footer-links">
+            <li><a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a></li>
+            <li><a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub (@moHaddad1)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeStart Academy. Built by <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a>.</p>
+        <div class="footer-credit-links">
+          <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          <a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

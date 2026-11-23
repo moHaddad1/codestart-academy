@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn what HTML is, how HTML elements and document structure work, and explore the evolution of HTML5.">
+  <meta name="author" content="Mohamed Alhaddad">
+  <title>CodeStart Academy — HTML Introduction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="index.html" class="site-brand">
+        <span class="site-logo-box">
+          <img src="assets/images/logo.png" alt="CodeStart Academy Logo" width="42" height="42">
+        </span>
+        <span class="site-brand-text">
+          <span class="site-title">CodeStart Academy</span>
+          <span class="site-subtitle">Coding for Beginners</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="html-intro.html" class="active">HTML</a></li>
+          <li><a href="css-intro.html">CSS</a></li>
+          <li><a href="exercises.html">Practice</a></li>
+          <li><a href="cheatsheets.html">Sheets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="lesson-layout">
+
+      <aside class="lesson-sidebar" aria-label="HTML lessons">
+        <h2 class="sidebar-title">HTML Lessons</h2>
+        <ul class="sidebar-links">
+          <li><a href="html-intro.html" class="active">Introduction</a></li>
+          <li><a href="html-elements.html">Elements</a></li>
+          <li><a href="html-tables.html">Tables</a></li>
+          <li><a href="html-layout.html">Layout</a></li>
+          <li><a href="html-forms.html">Forms</a></li>
+        </ul>
+        <div class="sidebar-divider"></div>
+        <a href="exercises.html" class="sidebar-secondary-link">Practice Quiz &rarr;</a>
+        <a href="cheatsheets.html" class="sidebar-secondary-link">HTML Cheatsheet &rarr;</a>
+      </aside>
+
+      <div class="lesson-content">
+
+        <header class="lesson-header">
+          <div class="lesson-header-meta">
+            <span class="badge badge-html">HTML Track</span>
+            <span class="lesson-step-label">Lesson 1 of 5</span>
+          </div>
+          <h1 class="lesson-page-title">HTML Introduction</h1>
+          <p class="lesson-page-lead">Understand how HyperText Markup Language structures every webpage, inspect your first HTML5 document, and learn how browsers render tags.</p>
+        </header>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">What is HTML?</h2>
+          <ul class="lesson-list">
+            <li>HTML stands for <strong>Hyper Text Markup Language</strong></li>
+            <li>HTML is the standard markup language for creating Web pages</li>
+            <li>HTML describes the structure of a Web page</li>
+            <li>HTML consists of a series of elements</li>
+            <li>HTML elements tell the browser how to display the content</li>
+            <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+          </ul>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">A Simple HTML Document</h2>
+
+          <div class="example-box">
+            <div class="example-box-header">
+              <span class="example-label">Example</span>
+            </div>
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tok-tag">&lt;html&gt;</span>
+<span class="tok-tag">&lt;head&gt;</span>
+  <span class="tok-tag">&lt;title&gt;</span>Page Title<span class="tok-tag">&lt;/title&gt;</span>
+<span class="tok-tag">&lt;/head&gt;</span>
+<span class="tok-tag">&lt;body&gt;</span>
+
+  <span class="tok-tag">&lt;h1&gt;</span>My First Heading<span class="tok-tag">&lt;/h1&gt;</span>
+  <span class="tok-tag">&lt;p&gt;</span>My first paragraph.<span class="tok-tag">&lt;/p&gt;</span>
+
+<span class="tok-tag">&lt;/body&gt;</span>
+<span class="tok-tag">&lt;/html&gt;</span></code></pre>
+            </div>
+            <div class="example-actions">
+              <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-sm">Try it Yourself &raquo;</a>
+            </div>
+          </div>
+
+          <h3 class="lesson-subtitle">Example Explained</h3>
+          <ul class="lesson-list">
+            <li>The <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this document is an HTML5 document</li>
+            <li>The <code>&lt;html&gt;</code> element is the root element of an HTML page</li>
+            <li>The <code>&lt;head&gt;</code> element contains meta information about the HTML page</li>
+            <li>The <code>&lt;title&gt;</code> element specifies a title for the HTML page</li>
+            <li>The <code>&lt;body&gt;</code> element defines the document's body and is a container for all visible content</li>
+            <li>The <code>&lt;h1&gt;</code> element defines a large heading</li>
+            <li>The <code>&lt;p&gt;</code> element defines a paragraph</li>
+          </ul>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">What is an HTML Element?</h2>
+
+          <p class="lesson-text">An HTML element is defined by a start tag, some content, and an end tag:</p>
+
+          <div class="syntax-strip">
+            <div class="code-card" data-lang="HTML Syntax">
+              <pre><code><span class="tok-tag">&lt;tagname&gt;</span>Content goes here...<span class="tok-tag">&lt;/tagname&gt;</span></code></pre>
+            </div>
+          </div>
+
+          <p class="lesson-text">The HTML <strong>element</strong> is everything from the start tag to the end tag:</p>
+
+          <div class="syntax-strip">
+            <div class="code-card" data-lang="HTML">
+              <pre><code><span class="tok-tag">&lt;h1&gt;</span>My First Heading<span class="tok-tag">&lt;/h1&gt;</span>
+<span class="tok-tag">&lt;p&gt;</span>My first paragraph.<span class="tok-tag">&lt;/p&gt;</span></code></pre>
+            </div>
+          </div>
+
+          <div class="table-scroll">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Start tag</th>
+                  <th>Element content</th>
+                  <th>End tag</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;h1&gt;</code></td>
+                  <td>My First Heading</td>
+                  <td><code>&lt;/h1&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;p&gt;</code></td>
+                  <td>My first paragraph.</td>
+                  <td><code>&lt;/p&gt;</code></td>
+                </tr>
+                <tr>
+                  <td><code>&lt;br&gt;</code></td>
+                  <td><em>none</em></td>
+                  <td><em>none</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="note-box">
+            <p><strong>Note:</strong> Some HTML elements have no content (like the <code>&lt;br&gt;</code> element). These are called empty elements and do not have an end tag!</p>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Web Browsers</h2>
+          <p class="lesson-text">The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly.</p>
+          <p class="lesson-text">A browser does not display the HTML tags, but uses them to determine how to display the document:</p>
+
+          <div class="browser-mockup">
+            <img src="assets/images/firstWeb-html.png" alt="Web browser displaying an HTML page with a heading and paragraph">
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">HTML Page Structure</h2>
+          <p class="lesson-text">Below is a visualization of an HTML page structure:</p>
+
+          <div class="structure-diagram">
+            <div class="structure-outer">
+              <span class="struct-tag">&lt;html&gt;</span>
+
+              <div class="structure-inner">
+                <span class="struct-tag">&lt;head&gt;</span>
+                <div class="structure-box">
+                  <span class="struct-tag">&lt;title&gt;</span>Page title<span class="struct-tag">&lt;/title&gt;</span>
+                </div>
+                <span class="struct-tag">&lt;/head&gt;</span>
+              </div>
+
+              <div class="structure-inner">
+                <span class="struct-tag">&lt;body&gt;</span>
+                <div class="structure-box">&lt;h1&gt;This is a heading&lt;/h1&gt;</div>
+                <div class="structure-box">&lt;p&gt;This is a paragraph.&lt;/p&gt;</div>
+                <div class="structure-box">&lt;p&gt;This is another paragraph.&lt;/p&gt;</div>
+                <span class="struct-tag">&lt;/body&gt;</span>
+              </div>
+
+              <span class="struct-tag">&lt;/html&gt;</span>
+            </div>
+          </div>
+
+          <div class="note-box note-info">
+            <p><strong>Note:</strong> The content inside the <code>&lt;body&gt;</code> section will be displayed in a browser. The content inside the <code>&lt;title&gt;</code> element will be shown in the browser's title bar or tab.</p>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">HTML History</h2>
+          <p class="lesson-text">Since the early days of the World Wide Web, there have been many versions of HTML:</p>
+
+          <div class="table-scroll">
+            <table class="lesson-table">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Version</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1989</td><td>Tim Berners-Lee invented www</td></tr>
+                <tr><td>1991</td><td>Tim Berners-Lee invented HTML</td></tr>
+                <tr><td>1993</td><td>Dave Raggett drafted HTML+</td></tr>
+                <tr><td>1995</td><td>HTML Working Group defined HTML 2.0</td></tr>
+                <tr><td>1997</td><td>W3C Recommendation: HTML 3.2</td></tr>
+                <tr><td>1999</td><td>W3C Recommendation: HTML 4.01</td></tr>
+                <tr><td>2000</td><td>W3C Recommendation: XHTML 1.0</td></tr>
+                <tr><td>2008</td><td>WHATWG HTML5 First Public Draft</td></tr>
+                <tr><td>2012</td><td><a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noopener noreferrer">WHATWG HTML5 Living Standard</a></td></tr>
+                <tr><td>2014</td><td><a href="https://www.w3.org/TR/html5/" target="_blank" rel="noopener noreferrer">W3C Recommendation: HTML5</a></td></tr>
+                <tr><td>2016</td><td>W3C Candidate Recommendation: HTML 5.1</td></tr>
+                <tr><td>2017</td><td><a href="https://www.w3.org/TR/html51/" target="_blank" rel="noopener noreferrer">W3C Recommendation: HTML5.1 2nd Edition</a></td></tr>
+                <tr><td>2017</td><td><a href="https://www.w3.org/TR/html52/" target="_blank" rel="noopener noreferrer">W3C Recommendation: HTML5.2</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="note-box note-info">
+            <p>This tutorial follows the latest HTML5 standard.</p>
+          </div>
+        </section>
+
+        <section class="lesson-section">
+          <h2 class="lesson-title">Video Lesson</h2>
+          <div class="lesson-video-wrapper">
+            <iframe src="https://www.youtube.com/embed/it1rTvBcfRg?si=RNph4nLI3Ahp1BVe" title="HTML Introduction Video Lesson" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <nav class="lesson-nav-btns is-end-only" aria-label="Lesson navigation">
+          <a href="html-elements.html" class="btn btn-dark">Next: HTML Elements &rarr;</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">
+            <img src="assets/images/logo.png" alt="CodeStart Academy" width="34" height="34">
+            <span>CodeStart Academy</span>
+          </div>
+          <p class="footer-description">An interactive, beginner-friendly HTML &amp; CSS learning platform built with semantic markup, modern CSS architecture, and vanilla JavaScript.</p>
+        </div>
+
+        <div>
+          <h3>Curriculum</h3>
+          <ul class="footer-links">
+            <li><a href="html-intro.html">HTML Fundamentals</a></li>
+            <li><a href="css-intro.html">CSS Styling &amp; Layout</a></li>
+            <li><a href="css-boxmodel.html">Box Model Visualizer</a></li>
+            <li><a href="exercises.html">Interactive Practice</a></li>
+            <li><a href="cheatsheets.html">Quick Reference Sheets</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Creator</h3>
+          <ul class="footer-links">
+            <li><a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a></li>
+            <li><a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub (@moHaddad1)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CodeStart Academy. Built by <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Mohamed Alhaddad</a>.</p>
+        <div class="footer-credit-links">
+          <a href="https://mohamedalhaddad.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          <a href="https://github.com/moHaddad1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
